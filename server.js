@@ -7,6 +7,8 @@ const router = jsonServer.router(path.join(__dirname, "db.json"));
 const middleWares = jsonServer.defaults();
 server.use(jsonServer.bodyParser);
 server.use(middleWares);
+const port = process.env.PORT || 3000;
+server.listen(port);
 
 const isExist = (email) => {
   return getUsersDb().users.findIndex((user) => user.email === email) !== -1;

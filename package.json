@@ -8,7 +8,7 @@
   },
   "scripts": {
     "server": "nodemon server.js",
-    "start": "json-server --watch db.json --port 3003"
+    "start": "node server.js"
   },
   "license": "MIT",
   "devDependencies": {
